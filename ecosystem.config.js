@@ -14,7 +14,6 @@
       instances: 2, // pm2 instance count
       autorestart: true, // auto restart if process crash
       watch: false, // files change automatic restart
-      watch: ['dist'],
       ignore_watch: ['logs', 'utils'], // ignore files change
       max_memory_restart: '1G', // restart if process use more than 1G memory
       merge_logs: true, // if true, stdout and stderr will be merged and sent to pm2 log
