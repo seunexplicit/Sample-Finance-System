@@ -1,0 +1,22 @@
+.env*
+
+node_modules
+
+node_modules/
+
+src/public/
+
+dist
+
+Local settings*
+
+.vs/
+.vscode
+
+.env.development.local
+.env.production.local
+.env.test.local
+
+src/logger
+
+logs

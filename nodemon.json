@@ -1,0 +1,17 @@
+{
+    "watch": [
+        "src",
+        ".env"
+    ],
+    "ext": "js,ts,json",
+    "ignore": [
+        "src/logs/*",
+        "src/**/*.{spec,test}.ts"
+    ],
+    "scripts":{
+        "start":"nodemon src/server.ts"
+    }
+   
+}
+
+ 
