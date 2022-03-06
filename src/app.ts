@@ -22,8 +22,6 @@ class App {
     this.env = NODE_ENV || 'development';
     this.port = process.env.PORT || 3000;
 
-    console.log(this.port, "00000000")
-
     this.connectToDatabase();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
@@ -74,22 +72,6 @@ class App {
       this.app.use('/', route.router);
     });
   }
-
-  // private initializeSwagger() {
-  //   const options = {
-  //     swaggerDefinition: {
-  //       info: {
-  //         title: 'REST API',
-  //         version: '1.0.0',
-  //         description: 'Example docs',
-  //       },
-  //     },
-  //     apis: ['swagger.yaml'],
-  //   };
-
-  //   const specs = swaggerJSDoc(options);
-  //   this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
-  // }
 
   private initializeErrorHandling() {
     this.app.use(errorMiddleware);

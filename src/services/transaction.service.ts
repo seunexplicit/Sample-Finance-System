@@ -21,7 +21,6 @@ export class TransactionService{
       if(userHasAccount==-1) throw new HttpException(400,'Invalid Account Number')
       const paystackResponse  = await acceptPayment(transactionData.amount)
       if(!paystackResponse.data?.status){
-         console.log(paystackResponse)
          throw new HttpException(500,'Transaction could not be processed')
       }
       account.amount = account.amount+transactionData.amount;
@@ -156,9 +155,9 @@ export class TransactionService{
       user.save();
    }
    catch(err){
-      console.log(err);
+      throw new HttpException(500, err);
    }
-   }
+}
 
    async createFundHistory(
       amount:number,  
@@ -185,7 +184,7 @@ export class TransactionService{
          user.save();
       }
       catch(err){
-         console.log(err);
+         throw new HttpException(500, err);
       }
    }
 
@@ -217,7 +216,7 @@ export class TransactionService{
          user.save();
       }
       catch(err){
-         console.log(err)
+         throw new HttpException(500, err);
       }
    }
 }
