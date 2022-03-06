@@ -22,6 +22,8 @@ class App {
     this.env = NODE_ENV || 'development';
     this.port = process.env.PORT || 3000;
 
+    console.log(this.port, "00000000")
+
     this.connectToDatabase();
     this.initializeMiddlewares();
     this.initializeRoutes(routes);
@@ -30,6 +32,7 @@ class App {
 
   public listen() {
     this.app.listen(this.port, () => {
+      console.log("78590430487658490");
       logger.info(`=================================`);
       logger.info(`======= ENV: ${this.env} =======`);
       logger.info(`🚀 App listening on the port ${this.port}`);

@@ -20,7 +20,6 @@
       output: './logs/access.log', // pm2 log file
       error: './logs/error.log', // pm2 error log file
       env: { // environment variable
-        PORT: 3000,
         NODE_ENV: 'production',
       },
     },
@@ -46,10 +45,10 @@
   ],
   deploy: {
     production: {
-      user: 'user',
-      host: '0.0.0.0',
+      user: 'SSH_USERNAME',
+      host: 'SSH_HOSTMACHINE',
       ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
+      repo: 'https://github.com/seunexplicit',
       path: 'dist/server.js',
       'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --only prod',
     },
