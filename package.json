@@ -6,7 +6,7 @@
   "license": "ISC",
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production --only prod",
-    "heroku-postbuild": "npm install pm2",
+    "heroku-postbuild": "npm install -g pm2",
     "dev": "cross-env NODE_ENV=development nodemon",
     "build":"tsc && tsc-alias",
     "postinstall": "tsc",
