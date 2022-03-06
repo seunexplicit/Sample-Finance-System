@@ -1,5 +1,5 @@
-import { NAME } from "@/constants/schema-name.constant";
-import { TransactionType } from "@/interfaces/transaction.interface";
+import { NAME } from "../constants/schema-name.constant";
+import { TransactionType } from "../interfaces/transaction.interface";
 import { Schema } from "mongoose";
 
 export const transactionSchema: Schema = new Schema({

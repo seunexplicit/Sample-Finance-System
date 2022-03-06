@@ -1,6 +1,6 @@
-import { SECRET_KEY } from "@/config";
-import { DataStoredInToken, TokenData } from "@/interfaces/auth.interface";
-import { User } from "@/interfaces/users.interface";
+import { SECRET_KEY } from "../config";
+import { DataStoredInToken, TokenData } from "../interfaces/auth.interface";
+import { User } from "../interfaces/users.interface";
 import { sign } from "jsonwebtoken";
 
 export function createToken(user: User): TokenData {

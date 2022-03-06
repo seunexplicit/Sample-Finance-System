@@ -1,10 +1,10 @@
 import { hash } from 'bcrypt';
-import { CreateUserDto } from '@dtos/users.dto';
-import { HttpException } from '@exceptions/HttpException';
-import { User } from '@interfaces/users.interface';
-import { isEmpty } from '@utils/util';
-import { userModel } from '@/models';
-import { TokenData } from '@/interfaces/auth.interface';
+import { CreateUserDto } from '../dtos/users.dto';
+import { HttpException } from '../exceptions/HttpException';
+import { User } from '../interfaces/users.interface';
+import { isEmpty } from '../utils/util';
+import { userModel } from '../models';
+import { TokenData } from '../interfaces/auth.interface';
 import { createToken } from './createToken.service';
 
 class UserService {

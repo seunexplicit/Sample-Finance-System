@@ -1,4 +1,4 @@
-import { AccountType } from '@/interfaces/account.interface';
+import { AccountType } from '../interfaces/account.interface';
 
 export const Accounts  = [
    {

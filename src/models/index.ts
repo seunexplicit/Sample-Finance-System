@@ -1,11 +1,11 @@
-import { NAME } from '@/constants/schema-name.constant';
-import { User } from '@/interfaces/users.interface';
+import { NAME } from '../constants/schema-name.constant';
+import { User } from '../interfaces/users.interface';
 import { Document, model } from 'mongoose';
 import { userSchema } from './users.model';
 import { transactionSchema } from './transaction.model';
 import { TransactionHistory } from './../interfaces/transaction.interface';
 import { accountSchema } from './account.model';
-import { Account } from '@/interfaces/account.interface';
+import { Account } from '../interfaces/account.interface';
 
 const schemaMapping = {
    USER:{name:NAME.user, schema:userSchema},

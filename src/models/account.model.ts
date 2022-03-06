@@ -1,6 +1,6 @@
 import { Schema } from "mongoose";
-import { NAME } from '@/constants/schema-name.constant';
-import { AccountType } from "@/interfaces/account.interface";
+import { NAME } from '../constants/schema-name.constant';
+import { AccountType } from "../interfaces/account.interface";
 
 export const accountSchema: Schema = new Schema({
    user:{type:Schema.Types.ObjectId, ref:NAME.user},

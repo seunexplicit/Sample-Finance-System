@@ -1,4 +1,4 @@
-import { AccountType } from '@/interfaces/account.interface';
+import { AccountType } from '../interfaces/account.interface';
 import { IsEnum, IsMongoId, IsOptional } from 'class-validator';
 
 export class createAccountDto{

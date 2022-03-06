@@ -1,10 +1,10 @@
-import { Routes } from "@/interfaces/routes.interface";
+import { Routes } from "../interfaces/routes.interface";
 import { Router } from "express";
 import { TransactionControllers } from './../controllers/transaction.controller';
 import validationMiddleware from './../middlewares/validation.middleware';
 import { TransferDto } from '../dtos/transfer.dto';
-import authMiddleware from "@/middlewares/auth.middleware";
-import { DepositDto } from '@/dtos/deposit.dto';
+import authMiddleware from "../middlewares/auth.middleware";
+import { DepositDto } from '../dtos/deposit.dto';
 import { historyBodyDto, historyParamsDto, createAccountDto } from './../dtos/transaction.dto';
 
 export class TransactionsRoute implements Routes {

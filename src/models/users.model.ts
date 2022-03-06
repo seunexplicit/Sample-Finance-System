@@ -1,5 +1,5 @@
 import { Schema } from "mongoose";
-import { NAME } from '@/constants/schema-name.constant';
+import { NAME } from '../constants/schema-name.constant';
 
 export const userSchema: Schema = new Schema({
   email: {

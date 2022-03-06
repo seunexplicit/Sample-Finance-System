@@ -1,14 +1,12 @@
-import { DepositDto } from "@/dtos/deposit.dto";
-import { TransferDto } from "@/dtos/transfer.dto";
-import { Account, AccountType } from "@/interfaces/account.interface";
-import { RequestWithUser } from '@/interfaces/auth.interface';
+import { DepositDto } from "../dtos/deposit.dto";
+import { TransferDto } from "../dtos/transfer.dto";
+import { Account, AccountType } from "../interfaces/account.interface";
+import { RequestWithUser } from '../interfaces/auth.interface';
 import { acceptPayment } from './paystack.service';
-import { ServiceError } from '@/interfaces/service.interface';
-import { accountModel, transactionModel, userModel } from "@/models";
-import { NAME } from './../constants/schema-name.constant';
+import { accountModel, transactionModel, userModel } from "../models";
 import { Accounts } from './../constants/account-type.constant';
 import { TransactionHistory, TransactionType } from './../interfaces/transaction.interface';
-import { HttpException } from "@/exceptions/HttpException";
+import { HttpException } from "../exceptions/HttpException";
 
 export class TransactionService{
 

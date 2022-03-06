@@ -1,4 +1,4 @@
-import { PAYSTACK_SECRET_KEY } from '@/config';
+import { PAYSTACK_SECRET_KEY } from '../config';
 import axios from 'axios';
 
 export const acceptPayment = async (amount:number, description='Fund Deposit')=>{
