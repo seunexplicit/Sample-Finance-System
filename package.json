@@ -5,13 +5,14 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "pm2-runtime start ecosystem.config.js --only prod",
+    "start": "pm2-runtime start ecosystem.config.js --env production --only prod",
     "heroku-postbuild": "npm install pm2",
     "dev": "cross-env NODE_ENV=development nodemon",
     "postinstall": "tsc",
     "build:swc": "swc src -d dist --source-maps --copy-files",
     "test": "jest --forceExit --detectOpenHandles",
     "deploy:prod": "npm run build && pm2 start ecosystem.config.js --only prod",
+    "deploy": "git add . && git commit -m Heroku && git push heroku main",
     "deploy:dev": "pm2 start ecosystem.config.js --only dev"
   },
   "dependencies": {
