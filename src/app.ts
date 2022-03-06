@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import hpp from 'hpp';
 import morgan from 'morgan';
 import { connect, set } from 'mongoose';
-import { NODE_ENV, PORT, LOG_FORMAT, ORIGIN, CREDENTIALS } from './config';
+import { NODE_ENV, LOG_FORMAT, ORIGIN, CREDENTIALS } from './config';
 import { dbConnection } from './databases';
 import { Routes } from './interfaces/routes.interface';
 import errorMiddleware from './middlewares/error.middleware';
